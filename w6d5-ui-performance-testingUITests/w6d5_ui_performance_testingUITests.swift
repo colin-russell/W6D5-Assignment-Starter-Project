@@ -64,6 +64,9 @@ class w6d5_ui_performance_testingUITests: XCTestCase {
         showMealDetail(mealName: "Burger2", numberOfCalories: 300)
         let detailText = app.staticTexts["detailViewControllerLabel"].label
         XCTAssertEqual(detailText, "Burger2 - 300")
+        
+        app.navigationBars["Detail"].buttons["Master"].tap()
+        
     }
     
     func showMealDetail(mealName: String, numberOfCalories: Int) {
